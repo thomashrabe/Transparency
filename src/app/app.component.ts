@@ -30,10 +30,12 @@ export class AppComponent {
   }
 
   async transparency(){
-    const transparencyResult = await this.requestPermission();
-    console.log("");
-    console.log(transparencyResult);
-    console.log("");
+    this.requestPermission().then(
+        (transparencyResult) => {
+            console.log("");
+            console.log(transparencyResult);
+            console.log("");
+        });
   }
 
 }
